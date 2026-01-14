@@ -3,9 +3,7 @@
 A collection of personal web projects for my portfolio, built using HTML, CSS, and JavaScript.
 
 ## Projects
-- **Project1**: Personal portfolio website
-- **Project2**: Mini JavaScript game
-- **Project3**: Responsive landing page
+
 
 ## Technologies
 - HTML
