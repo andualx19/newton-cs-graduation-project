@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Isaac Newton - Curiozități</title>
+        <link rel="icon" type="image/png" href="imgs/favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-curiozitati.css">
+    </head>
+
+    <body>
+        <header id="main-header"></header>
+
+        <main>
+            <h2>Lucruri mai puțin cunoscute</h2>
+        
+            <div class="curiozitate-box">
+                <h3>Povestea mărului</h3>
+                <p>Contrar legendei, mărul nu i-a căzut în cap. Newton a observat un măr căzând din pom în timp ce se afla la ferma sa și s-a întrebat de ce fructele cad întotdeauna perpendicular pe pământ și nu în lateral sau în sus.</p>
+            
+                <details class="poveste-extinsa">
+                    <summary>Află detaliile din spatele legendei...</summary>
+                    <div class="poveste-content">
+                        <p>Deși mărul a devenit simbolul suprem al geniului său, savantul nu a fost niciodată lovit de fruct. Povestea a fost „șlefuită” chiar de Newton spre sfârșitul vieții pentru a explica mai ușor conceptul de gravitație. În realitate, în anul 1666, stând pe gânduri în grădina sa de la Woolsthorpe, a văzut un măr căzând perpendicular spre pământ. Întrebarea lui nu a fost despre măr, ci despre legătura acestuia cu universul: <em>„Dacă pământul atrage mărul, oare nu atrage și Luna cu aceeași forță?”</em> Această intuiție a fost scânteia care a unit legile cerului cu cele ale pământului.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="curiozitate-box">
+                <h3>Alchimistul secret</h3>
+                <p>Newton a petrecut mai mult timp studiind alchimia și teologia decât fizica sau matematica. El a încercat ani de zile să descopere „Piatra Filozofală”, capabilă să transforme metalele în aur.</p>
+            
+                <details class="poveste-extinsa">
+                    <summary>Descoperă preocupările sale oculte...</summary>
+                    <div class="poveste-content">
+                        <p>Newton a lăsat în urmă peste un milion de cuvinte despre alchimie, o activitate strict interzisă de lege în acea epocă. El credea cu tărie în existența „Pietrei Filozofale” și a petrecut nopți întregi în laboratorul său secret încercând să transmute metalele în aur. Această latură mistică nu a fost doar o pierdere de timp; mulți istorici cred că viziunea sa despre forțele invizibile care atrag obiectele (gravitația) a fost influențată direct de studiile sale alchimice despre energiile ascunse ale materiei.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="curiozitate-box">
+                <h3>Dușmanul falsificatorilor</h3>
+                <p>În calitate de director al Monetăriei Regale, Newton a urmărit personal falsificatorii de monede din Londra, trimițând mulți dintre ei la închisoare. El a introdus zimții de pe marginea monedelor pentru a preveni tăierea metalului prețios.</p>
+            
+                <details class="poveste-extinsa">
+                    <summary>Citește despre lupta sa cu infractorii...</summary>
+                    <div class="poveste-content">
+                        <p>Newton nu a tratat funcția de la Monetărie ca pe un titlu onorific. S-a deghizat deseori și a vizitat tavernele rău famate din Londra pentru a aduna dovezi împotriva falsificatorilor. Cel mai faimos inamic al său a fost William Chaloner, un falsificator genial pe care Newton l-a urmărit cu o rigoare matematică până când l-a trimis la spânzurătoare. Pentru a securiza economia, el a introdus micile zimți de pe marginea monedelor (care există și azi), prevenind astfel practica ilegală de a tăia fâșii fine de aur sau argint de pe marginile acestora.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="curiozitate-box">
+                <h3>Investitor ghinionist</h3>
+                <p>Deși era un geniu al matematicii, Newton a pierdut o avere (aproximativ 3 milioane de dolari în banii de azi) investind în „Compania Mărilor de Sud”. El a declarat ulterior: „Pot calcula mișcarea stelelor, dar nu și nebunia oamenilor”.</p>
+            
+                <details class="poveste-extinsa">
+                    <summary>Află cum a pierdut 3 milioane de dolari...</summary>
+                    <div class="poveste-content">
+                        <p>În 1720, Newton s-a lăsat prins în „Bula Mărilor de Sud”, una dintre primele mari crize financiare din istorie. Deși inițial a făcut profit, lăcomia și entuziasmul mulțimii l-au făcut să reinvestească totul chiar înainte de prăbușirea bursei. A pierdut aproximativ 20.000 de lire sterline (echivalentul a 3 milioane de dolari azi). Această experiență l-a traumatizat atât de mult încât a interzis oricui să mai rostească numele companiei în prezența sa, lăsând posterității celebrul citat: <em>„Pot calcula mișcarea stelelor, dar nu și nebunia oamenilor”</em>.</p>
+                    </div>
+                </details>
+            </div>
+
+            <section class="citate-sectiune">
+                <h2>Gânduri celebre</h2>
+                <div class="citata-container">
+                    <p id="text-citat">"Dacă am văzut mai departe decât alții, este pentru că am stat pe umerii uriașilor."</p>
+                    <button onclick="schimbaCitatul()" id="btn-citat">Alt citat</button>
+                </div>
+            </section>
+
+            <section class="opinii-sectiune">
+                <h2>Ce au spus alte genii despre el?</h2>
+                <div class="opinii-grid">
+                    <div class="opinie-card">
+                        <p>"Natura și legile ei zăceau ascunse în noapte; Dumnezeu a spus: 'Să fie Newton!' și s-a făcut lumină."</p>
+                        <cite>— Alexander Pope</cite>
+                    </div>
+                    <div class="opinie-card">
+                        <p>"Newton a fost cel mai mare geniu care a existat vreodată și cel mai norocos, căci nu se poate găsi decât o singură dată sistemul lumii."</p>
+                        <cite>— Joseph-Louis Lagrange</cite>
+                    </div>
+                    <div class="opinie-card">
+                        <p>"Nicio persoană din istoria omenirii nu a avut o influență mai mare asupra cursului științei."</p>
+                        <cite>— Albert Einstein</cite>
+                    </div>
+                    <div class="opinie-card">
+                        <p>"Newton a fost o figură colosală. El a stabilit bazele fizicii așa cum o cunoaștem, iar munca sa a rămas neclintită timp de peste două sute de ani."</p>
+                        <cite>— Stephen Hawking</cite>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quiz-sectiune">
+                <div id="quiz-card">
+                    <h2>Verifică-ți cunoștințele!</h2>
+                    <div id="intrebare-container">
+                        <p id="intrebare-text">Încărcare întrebare...</p>
+                        <div id="optiuni-container"></div>
+                    </div>
+                    <button id="btn-quiz" onclick="urmatoareaIntrebare()" style="display:none;">Următoarea</button>
+                    <div id="scor-final" style="display:none;"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="main-footer"></footer>
+
+        <button onclick="scrollToTop()" id="btnScrollUp" title="Înapoi sus">
+            ↑
+        </button>
+
+        <script src="js/citate.js"></script>
+        <script src="js/quiz.js"></script>
+        <script src="js/componente.js"></script>
+        <script>genereazaHeader("Curiozități");</script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

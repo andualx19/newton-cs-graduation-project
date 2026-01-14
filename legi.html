@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Isaac Newton - Legile Mișcării</title>
+        <link rel="icon" type="image/png" href="imgs/favicon.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-legi.css">
+    </head>
+
+    <body>
+        <header id="main-header"></header>
+
+        <main>
+            <h2>Cele Trei Legi ale Dinamicii</h2>
+            <p>Formulate în lucrarea sa monumentală <em>Principia</em>, aceste legi descriu relația dintre forțele care acționează asupra unui corp și mișcarea acestuia.</p>
+
+            <div class="lege-card">
+                <div class="lege-numar">I</div>
+                <div class="lege-continut">
+                    <h3>Principiul Inerției</h3>
+                    <p>Orice corp își menține starea de repaus sau de mișcare rectilinie uniformă atât timp cât nicio forță exterioară nu îl constrânge să își schimbe această stare.</p>
+                    <span class="lege-exemplu"><strong>Exemplu:</strong> Tendința pasagerilor de a fi proiectați înainte în momentul frânării bruște.</span>
+                    
+                    <details class="simulare-container">
+                        <summary>Apasă pentru Simularea Inerției</summary>
+                        <div class="simulare-box s1">
+                            <div class="date-live">v = 20 m/s (ct.) | ΣF = 0</div>
+                            <div class="obiect bila-inerție"></div>
+                            <p class="sim-hint">Fără frecare, viteza rămâne constantă la infinit.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="lege-card">
+                <div class="lege-numar">II</div>
+                <div class="lege-continut">
+                    <h3>Principiul Fundamental</h3>
+                    <p>Accelerația unui corp este direct proporțională cu forța care acționează asupra lui și invers proporțională cu masa acestuia.</p>
+                    <div class="formula-matematica">F = m &sdot; a</div>
+                    
+                    <details class="simulare-container">
+                        <summary>Apasă pentru Simularea Accelerației</summary>
+                        <div class="simulare-box s2">
+                            <div class="date-live">
+                                a = 5 m/s² | v = <span class="v-dinamic">0</span> m/s
+                            </div>
+                            <div class="obiect bila-accelerata"></div>
+                            <div class="forta-sageata">FORȚĂ (F) →</div>
+                            <p class="sim-hint">Forța constantă produce o creștere continuă a vitezei.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="lege-card">
+                <div class="lege-numar">III</div>
+                <div class="lege-continut">
+                    <h3>Principiul Acțiunii și Reacțiunii</h3>
+                    <p>Când un corp exercită o forță asupra altui corp, cel de-al doilea exercită asupra primului o forță egală în modul și opusă ca sens.</p>
+                    
+                    <details class="simulare-container">
+                        <summary>Apasă pentru Simularea Reacțiunii</summary>
+                        <div class="simulare-box s3">
+                            <div class="date-live">F<sub>AB</sub> = -F<sub>BA</sub> (10 N)</div>
+                            <div class="obiect bila-A">A</div>
+                            <div class="obiect bila-B">B</div>
+                            <p class="sim-hint">Impactul generează două forțe egale și opuse.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </main>
+
+        <footer id="main-footer"></footer>
+
+        <button onclick="scrollToTop()" id="btnScrollUp" title="Înapoi sus">
+            ↑
+        </button>
+
+        <script src="js/componente.js"></script>
+        <script>
+            genereazaHeader("Legile Mișcării");
+        </script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

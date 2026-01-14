@@ -1,0 +1,284 @@
+header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+    ),
+    url('../imgs/headers/header-realizari.webp');
+}
+
+.realizare-sectiune {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 35px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    animation: fadeInRealizare 1.2s ease-out;
+}
+
+h2 {
+    color: #a00;
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+
+.info-box {
+    background-color: #f8f8f8;
+    border-left: 5px solid #a00;
+    padding: 25px;
+    margin-top: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.info-box p {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 10px 0;
+    hyphens: auto;
+}
+
+.info-box strong {
+    color: #a00;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.realizare-sectiune ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.realizare-sectiune ul li {
+    margin-bottom: 12px;
+    color: #444444;
+}
+
+.realizare-sectiune ul li strong {
+    color: #a00;
+}
+
+.formula-matematica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cambria Math", "Times New Roman", serif;
+    font-size: 1.8rem;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    color: #1a1a1a;
+}
+
+.fractie {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.numarator {
+    border-bottom: 2px solid #333;
+    padding: 0 10px;
+}
+
+.numitor {
+    padding: 0 10px;
+}
+
+.tabel-tehnic {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+}
+
+.tabel-tehnic th {
+    background-color: #a00;
+    color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tabel-tehnic td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eeeeee;
+    color: #444444;
+}
+
+.tabel-tehnic tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.tabel-tehnic tr:hover {
+    background-color: #fff4f4;
+}
+
+.img-tehnica {
+    display: block;
+    max-width: 80%;
+    margin: 25px auto;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.calculator-sectiune {
+    border: 2px solid #a00;
+    background: #fffcfc;
+}
+
+.calculator-sectiune h2 {
+    text-align: center;
+}
+
+#rezultat-calcul-box {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+.dark-mode {
+    color-scheme: dark;
+}
+
+.dark-mode .realizare-sectiune {
+    background: #181818;
+    border-color: #333333;
+}
+
+.dark-mode h2 {
+    color: #ff4d4d;
+    border-bottom-color: #333333;
+}
+
+.dark-mode .realizare-sectiune p,
+.dark-mode .realizare-sectiune li {
+    color: #e0e0e0;
+}
+
+.dark-mode .info-box {
+    background-color: #252525;
+    color: #f0f0f0;
+    border-left-color: #ff4d4d;
+}
+
+.dark-mode .info-box strong {
+    color: #ff6b6b;
+}
+
+.dark-mode .formula-matematica,
+.dark-mode .formula-highlight {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-color: #444444;
+}
+
+.dark-mode .numarator {
+    border-bottom-color: #eeeeee;
+}
+
+.dark-mode .tabel-tehnic {
+    background: #222222;
+    border-color: #333333;
+}
+
+.dark-mode .tabel-tehnic th {
+    background-color: #600;
+}
+
+.dark-mode .tabel-tehnic td {
+    color: #cccccc;
+    border-bottom-color: #333333;
+}
+
+.dark-mode .tabel-tehnic tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .tabel-tehnic tr:hover {
+    background-color: #251a1a;
+}
+
+.dark-mode .img-tehnica {
+    filter: brightness(0.8) contrast(1.2);
+    border-color: #444444;
+}
+
+.dark-mode #rezultat-calcul-box {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+@keyframes fadeInRealizare {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .realizare-sectiune {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .calculator-sectiune,
+    .calculator-container,
+    #graficMate,
+    #rezultat-calcul-box,
+    .btn-calcul,
+    .input-group,
+    #main-header,
+    #main-footer,
+    #btnScrollUp {
+        display: none !important;
+    }
+
+    .realizare-sectiune {
+        page-break-inside: avoid;
+        margin-bottom: 30px;
+    }
+
+    .info-box {
+        background-color: #f9f9f9;
+        border-left: 5px solid #a00;
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .tabel-tehnic th,
+    .tabel-tehnic td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+    }
+}

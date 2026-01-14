@@ -1,0 +1,170 @@
+/* --- HEADER & FUNDAL --- */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('../imgs/headers/header-viata.webp'); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- SECTIUNI SI TITLURI --- */
+.bio-section {
+    display: block;   
+    width: 100%;       
+    clear: both; /* Esential pentru a separa sectiunile cu float */
+    padding-top: 10px;
+}
+
+h2 {
+    color: #a00;
+    border-bottom: 2px solid #eee;
+    clear: both;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.split-container {
+    display: block; 
+    width: 100%;
+}
+
+.text-side p, .text-side-right p {
+    margin-top: 0;       
+    margin-bottom: 10px;  
+}
+
+.image-side, .image-side-left {
+    width: 30%;
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.image-side {
+    float: right;
+    margin-left: 20px;
+}
+
+.image-side-left {
+    float: left;
+    margin-right: 20px;
+}
+
+/* REPARAȚIE REZOLUȚIE: Previne turtirea imaginilor */
+.image-side img, .image-side-left img {
+    width: 100%;
+    height: auto !important; 
+    display: block;
+    object-fit: contain;
+}
+
+.caption {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* --- TEXT --- */
+.text-side, .text-side-right {
+    display: block;
+    width: auto;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* --- TABEL CRONOLOGIC (LIGHT MODE) --- */
+.tabel-biografie {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.tabel-biografie th, .tabel-biografie td {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.tabel-biografie th {
+    background-color: #a00;
+    color: white;
+    text-transform: uppercase;
+}
+
+.tabel-biografie tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.formula-highlight {
+    background-color: #f9f9f9;
+    border-left: 5px solid #a00;
+    padding: 20px;
+    margin: 40px 0;
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+    clear: both;
+}
+
+/* --- DARK MODE (REPARAȚII TABEL) --- */
+.dark-mode body { background-color: #121212; color: #eee; }
+
+.dark-mode .tabel-biografie { background-color: #1e1e1e; border-color: #444; }
+.dark-mode .tabel-biografie td { border: 1px solid #444; color: #eee; }
+
+.dark-mode .tabel-biografie tr:nth-child(odd) { background-color: #1e1e1e !important; }
+.dark-mode .tabel-biografie tr:nth-child(even) { background-color: #2a2a2a !important; }
+
+.dark-mode .image-side, .dark-mode .image-side-left { background: #252525; border-color: #444; }
+.dark-mode .formula-highlight { background-color: #1e1e1e; color: #ccc; }
+.dark-mode h2 { color: #ff4d4d; border-bottom-color: #333; }
+.dark-mode .caption { color: #bbb; }
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important; 
+        print-color-adjust: exact !important;
+    }
+
+    img, .sectiune-viata, p, h2, h3 {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    main {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 10px auto;
+    }
+
+    #main-header, #main-footer, #btnScrollUp {
+        display: none !important;
+    }
+}
+
+/* Clearfix pentru a preveni colapsul containerelor */
+.split-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- FIX IMAGINI PE MOBIL --- */
+@media (max-width: 768px) {
+    .image-side, .image-side-left {
+        width: 90% !important; /* Mai lat pe mobil */
+        float: none !important;
+        margin: 0 auto 20px auto !important; /* Centreaza imaginea pe telefon */
+    }
+}
