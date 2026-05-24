@@ -1,27 +1,21 @@
-/* SETARI GENERALE SI RESETARE */
 * {
-    /* Include bordura si padding-ul in latimea totala a elementului */
     box-sizing: border-box;
 }
 
 html {
-    /* Activeaza derularea lina la navigarea prin ancore (#id) */
     scroll-behavior: smooth;
 }
 
 body {
-    /* Font clasic academic pentru proiect de atestat */
     font-family: "Times New Roman", Times, serif;
     line-height: 1.8;
     color: #333;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    /* Tranzitie pentru schimbarea temei (Light/Dark) */
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* STILURI PENTRU MODUL INTUNECAT (DARK MODE) */
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
@@ -288,7 +282,6 @@ main, header, footer, .galerie-item, .formula-highlight {
 }
 
 @media print {
-    /* 1. Fortam culorile si fundalurile */
     html, body {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
@@ -297,21 +290,18 @@ main, header, footer, .galerie-item, .formula-highlight {
         padding: 0 !important;
     }
 
-    /* 2. Pastram structura si forta linia rosie */
     .realizare-sectiune, .info-box, .formula-highlight, blockquote {
         background-color: #f9f9f9 !important;
         border: 1px solid #ddd !important;
-        /* Fortam linia rosie sa apara pe print */
         border-left: 8px solid #a00 !important; 
         padding: 20px !important;
-        margin: 20px auto !important; /* Centrare pe pagina */
+        margin: 20px auto !important;
         width: 90% !important;
         page-break-inside: avoid !important;
         display: block !important;
         text-align: center !important;
     }
 
-    /* 3. Imaginile sa nu fie taiate */
     img {
         max-width: 100% !important;
         height: auto !important;
@@ -320,17 +310,13 @@ main, header, footer, .galerie-item, .formula-highlight {
         margin: 10px auto;
     }
 
-    /* 4. Ascundem elementele inutile la print */
     #main-header, #main-footer, #btnScrollUp, .btn-calcul, .input-group, nav, .btn-theme {
         display: none !important;
     }
 
-    /* 5. Textele sa ramana vizibile */
     p, h1, h2, h3, li {
-        color: #000 !important; /* Negru curat pentru imprimanta */
+        color: #000 !important; 
     }
-
-    /* Am sters blocul blockquote vechi care punea linie gri */
     
     .curiozitate-item p {
         orphans: 3;
@@ -379,11 +365,10 @@ main, header, footer, .galerie-item, .formula-highlight {
         font-size: 1.2rem;
     }
     
-    /* Am adaugat margini aici ca sa ramana pe mijloc si pe telefon */
     .formula-highlight, .info-box, blockquote {
         font-size: 1rem !important;
         padding: 15px !important;
-        max-width: 95% !important; /* Mai lat pe telefon ca sa incapa textul */
-        margin: 20px auto !important; /* Pastreaza centrarea */
+        max-width: 95% !important; 
+        margin: 20px auto !important;
     }
 }

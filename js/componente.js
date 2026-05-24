@@ -21,7 +21,7 @@ function genereazaHeader(titluPagina) {
 
 const footerContent = `
     <hr>
-    <p>© 2026 Atestat realizat de Alexe Andrei-Cristian</p>
+    <p>© 2026 Atestat realizat de [YOUR NAME]</p>
     <p><strong>Resurse Academice și Biografice:</strong></p>
     <p>
         <a href="https://ro.wikipedia.org/wiki/Isaac_Newton" target="_blank">Wikipedia (RO)</a> | 

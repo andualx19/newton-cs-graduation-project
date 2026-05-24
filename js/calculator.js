@@ -15,7 +15,6 @@ function calculeazaFluxiunea() {
     var offsetX = 50; var offsetY = 240; var scaleX = 40; var scaleY = 0.4;
     var pX = offsetX + (t_p * scaleX);
 
-    // 1. DESENARE PRIMITIVĂ (Aria sub curbă / Integrare)
     ctx.fillStyle = "rgba(0, 102, 204, 0.15)"; 
     ctx.beginPath();
     ctx.moveTo(offsetX, offsetY);
@@ -29,14 +28,11 @@ function calculeazaFluxiunea() {
     ctx.closePath();
     ctx.fill();
 
-    // 2. DESENARE AXE ȘI ETICHETE MATEMATICE
     ctx.strokeStyle = '#666';
     ctx.lineWidth = 1;
     ctx.font = "italic 12px Times New Roman";
     ctx.beginPath();
-    // Axa Y (Fluxuri)
     ctx.moveTo(offsetX, 20); ctx.lineTo(offsetX, offsetY);
-    // Axa X (Timp)
     ctx.lineTo(380, offsetY);
     ctx.stroke();
     
@@ -44,7 +40,6 @@ function calculeazaFluxiunea() {
     ctx.fillText("y (fluent)", offsetX - 40, 30);
     ctx.fillText("t (timp)", 360, offsetY + 20);
 
-    // 3. DESENARE CURBĂ (FLUIENTUL)
     ctx.strokeStyle = '#333';
     ctx.lineWidth = 2.5;
     ctx.beginPath();
@@ -56,7 +51,6 @@ function calculeazaFluxiunea() {
     }
     ctx.stroke();
 
-    // 4. DESENARE TANGENTĂ (FLUXIUNEA)
     var flux_p = (2 * a * t_p) + b;
     var y_p = a * t_p * t_p + b * t_p;
     var pY = offsetY - (y_p * scaleY);
@@ -70,28 +64,31 @@ function calculeazaFluxiunea() {
     ctx.stroke();
     ctx.setLineDash([]);
 
-    // Punctul critic (Momentul t)
     ctx.fillStyle = '#a00';
     ctx.beginPath(); ctx.arc(pX, pY, 5, 0, Math.PI * 2); ctx.fill();
 
-    // 5. ETICHETE PE GRAFIC
     ctx.fillStyle = "#a00";
     ctx.fillText("Fluxiunea (tangenta)", pX + 10, pY - 20);
     ctx.fillStyle = "#0066cc";
     ctx.fillText("Primitiva (aria)", pX / 2, offsetY - 10);
 
-    // 6. FORMULE AFIȘATE (Notație Matematică)
     var c1 = (a / 3).toFixed(2);
     var c2 = (b / 2).toFixed(2);
     
     document.getElementById('rezultat-calcul-box').style.display = 'block';
     document.getElementById('rezultat-calcul-box').innerHTML = `
-        <h3 style="color: #a00; border-bottom: 1px solid #ddd;">Analiză de Calcul Infinitezimal</h3>
+        <h3 class="calcul-titlu">Analiză de Calcul Infinitezimal</h3>
         <p><strong>Fluent (Funcția):</strong> <em>f(t) = ${a}t² + ${b}t</em></p>
         <p><strong>Fluxiune (Derivata):</strong> <em>&dot;f(t) = ${2 * a}t + ${b}</em></p>
-        <p style="color: #0066cc;"><strong>Primitivă (Integrala):</strong> <em>F(t) = ${c1}t³ + ${c2}t² + C</em></p>
-        <div style="margin-top: 10px; padding: 10px; background: #fdfdfd; border: 1px solid #eee; font-size: 0.9rem;">
+        <p class="primitiva-text"><strong>Primitivă (Integrala):</strong> <em>F(t) = ${c1}t³ + ${c2}t² + C</em></p>
+        
+        <div class="moment-box">
             La momentul <strong>t = ${t_p}</strong>, rata de schimbare (fluxiunea) este <strong>${flux_p}</strong>.
         </div>
+
+        <p class="nota-explicativa">
+            * Linia roșie întreruptă reprezintă <strong>fluxiunea</strong> în punctul ales. <br>
+            Newton a demonstrat că această metodă este inversul calculării ariei (integrarea).
+        </p>
     `;
 }

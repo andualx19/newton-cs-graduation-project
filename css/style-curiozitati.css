@@ -28,7 +28,6 @@ header {
     color: #ff4d4d;
 }
 
-/* Stilul pentru Drop Box-uri */
 .poveste-extinsa {
     border-top: 1px dashed #ccc;
     margin-top: 15px;
@@ -37,7 +36,7 @@ header {
 
 .poveste-extinsa summary {
     font-weight: bold;
-    color: #a00; /* Roșu Newton */
+    color: #a00; 
     cursor: pointer;
     outline: none;
     padding: 5px 0;
@@ -55,10 +54,9 @@ header {
     border-radius: 5px;
     margin-top: 10px;
     line-height: 1.6;
-    animation: fadeIn 0.5s ease; /* Animație la deschidere */
+    animation: fadeIn 0.5s ease;
 }
 
-/* Stil pentru Dark Mode */
 .dark-mode .poveste-content {
     background: #252525;
     color: #eee;

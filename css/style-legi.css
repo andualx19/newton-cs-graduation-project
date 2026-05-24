@@ -1,10 +1,8 @@
-/* --- COMPONENTE GENERALE --- */
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
         url('../imgs/headers/header-legi.jpg'); 
 }
 
-/* Titluri în roșu conform cerinței */
 h2, h3 { 
     color: #a00 !important; 
     margin-top: 10px;
@@ -46,10 +44,9 @@ h2, h3 {
     color: #1a1a1a;
 }
 
-/* --- BUTONUL DE ACTIVARE (SUMAR) --- */
 .simulare-container summary {
     padding: 10px 0;
-    color: #a00; /* Roșu solicitat */
+    color: #a00;
     cursor: pointer;
     font-weight: bold;
     outline: none;
@@ -59,12 +56,11 @@ h2, h3 {
     text-decoration: underline;
 }
 
-/* --- OPTIMIZARE SIMULĂRI (SIMETRIE & CENTRARE) --- */
 .simulare-box {
     height: 160px;
     display: flex;
-    align-items: center;    /* Bila fix la mijloc pe Y */
-    justify-content: center; /* Bila fix la mijloc pe X */
+    align-items: center;   
+    justify-content: center; 
     background: #f4f4f4;
     border-radius: 8px;
     position: relative;
@@ -77,11 +73,10 @@ h2, h3 {
     height: 30px;
     background: #a00;
     border-radius: 50%;
-    position: relative; /* Esențial pentru centrarea Flexbox */
+    position: relative;
     z-index: 2;
 }
 
-/* Date Live (Verde Consolă) */
 .date-live {
     position: absolute;
     top: 8px;
@@ -97,10 +92,9 @@ h2, h3 {
     animation: sensorGlow 1s ease-in-out infinite alternate;
 }
 
-/* Explicația (Hint) - Simetrică la bază */
 .sim-hint {
     position: absolute;
-    bottom: 10px; /* Poziționat jos */
+    bottom: 10px;
     width: 100%;
     text-align: center;
     font-size: 11px;
@@ -109,9 +103,6 @@ h2, h3 {
     margin: 0;
 }
 
-/* --- ANIMAȚII LIVE & DINAMICE --- */
-
-/* Legea I */
 .simulare-container[open] .bila-inerție {
     animation: animInertie 3s linear infinite;
 }
@@ -121,7 +112,6 @@ h2, h3 {
     100% { transform: translateX(250px); }
 }
 
-/* Legea II - Accelerație & Cifre Live */
 .simulare-container[open] .bila-accelerata {
     animation: animAccel 2s ease-in infinite;
 }
@@ -130,7 +120,6 @@ h2, h3 {
     100% { transform: translateX(180px); }
 }
 
-/* Simulare cifre live */
 .simulare-container[open] .v-dinamic::after {
     content: "0";
     animation: schimbareViteza 2s linear infinite;
@@ -140,7 +129,6 @@ h2, h3 {
     60% { content: "65"; } 80% { content: "95"; } 100% { content: "130"; }
 }
 
-/* Legea III (Sincronizată) */
 .s3 .obiect { position: absolute; } 
 .bila-A { left: 15%; background: #a00; color: white; display: flex; align-items: center; justify-content: center; font-size: 10px; }
 .bila-B { left: 50%; background: #333; color: white; display: flex; align-items: center; justify-content: center; font-size: 10px; }
@@ -159,7 +147,6 @@ h2, h3 {
     100% { left: 50%; }
 }
 
-/* --- ALTE STILURI --- */
 @keyframes sensorGlow { from { box-shadow: 0 0 2px #0f0; } to { box-shadow: 0 0 10px #0f0; } }
 
 .dark-mode .lege-card { background: #1e1e1e; border-color: #333; }
@@ -174,4 +161,146 @@ h2, h3 {
 @media (max-width: 600px) {
     .lege-card { flex-direction: column; text-align: center; }
     .lege-numar { border-right: none; border-bottom: 2px solid #eee; margin: 0 0 15px 0; padding-bottom: 10px; }
+}
+
+.lege-exemplu {
+    display: block; 
+    margin-top: 15px; 
+    clear: both; 
+}
+
+.simulare-container {
+    margin-top: 20px;
+}
+
+.simulare-box.s4 {
+    height: 250px; 
+    background: radial-gradient(circle at center, #001233 0%, #000814 100%); 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s4 .date-live, .s4 .sim-hint {
+    position: absolute;
+    color: #fff;
+    font-size: 0.9rem;
+    z-index: 10; 
+}
+
+.s4 .date-live { top: 10px; left: 10px; }
+.s4 .sim-hint { bottom: 10px; left: 50%; transform: translateX(-50%); width: 90%; text-align: center;}
+
+.obiect.planeta {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #00b4d8, #03045e);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.6);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 5;
+}
+
+.obiect.satelit {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #e0e1dd, #adb5bd);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 0.6rem;
+    font-weight: bold;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -12.5px; 
+    margin-left: -12.5px; 
+    
+    transform-origin: 0% 0%; 
+    
+    transform: rotate(0deg) translateX(110px) rotate(0deg);
+    
+    animation: orbitaConstanta 6s linear infinite;
+}
+
+@keyframes orbitaConstanta {
+    0% {
+        /* Luna pleacă de la 0 grade, la distanța de 110px, și textul e drept (0deg) */
+        transform: rotate(0deg) translateX(110px) rotate(0deg);
+    }
+    100% {
+        /* Luna face un cerc complet (360), stă la 110px, și textul e rotit invers ca să stea drept */
+        transform: rotate(360deg) translateX(110px) rotate(-360deg);
+    }
+}
+
+.simulare-box.s5 {
+    height: 250px;
+    background: #f8f9fa;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    overflow: hidden;
+}
+
+.s5-centrat {
+    position: relative;
+    width: 200px; 
+    height: 150px;
+}
+
+.obiect.bila-compusa {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle at 30% 30%, #e63946, #8d0801);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: miscareDiagonalaV2 3s ease-in-out infinite;
+}
+
+.forta-sageata-1, .forta-sageata-2 {
+    position: absolute;
+    color: #457b9d;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.forta-sageata-1 {
+    bottom: 45px;
+    left: 10px;
+}
+
+.forta-sageata-2 {
+    bottom: 5px;
+    left: 45px;
+}
+
+@keyframes miscareDiagonalaV2 {
+    0% { transform: translate(0, 0); opacity: 0; }
+    10% { opacity: 1; }
+    80% { transform: translate(150px, -100px); opacity: 1; }
+    100% { transform: translate(150px, -100px); opacity: 0; }
 }

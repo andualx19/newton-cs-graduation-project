@@ -226,6 +226,30 @@ h2 {
     border: 1px solid #444444;
 }
 
+.calcul-titlu { color: #a00; border-bottom: 1px solid #ddd; margin-bottom: 10px; }
+.primitiva-text { color: #0066cc; }
+.nota-explicativa { font-size: 0.85rem; color: #666; margin-top: 10px; }
+
+.moment-box {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+body.dark-mode .info-box { background-color: #1a1a1a !important; color: white; }
+
+body.dark-mode .moment-box {
+    background: #2d2d2d !important; 
+    border-color: #444 !important;
+    color: #eee !important;
+}
+
+body.dark-mode .calcul-titlu { color: #ff4d4d !important; border-bottom-color: #444; }
+body.dark-mode .primitiva-text { color: #4da6ff !important; }
+body.dark-mode .nota-explicativa { color: #bbb !important; }
+
 @keyframes fadeInRealizare {
     from {
         opacity: 0;
